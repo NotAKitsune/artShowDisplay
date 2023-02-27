@@ -10,19 +10,13 @@ console.log(currentVideo+1);
 function myHandler(e) {
     var temp = Math.floor(Math.random() * 10);
     console.log(temp+" "+pc);
-    if(temp<pc&&currentVideo==3){
-        if(temp<pc){
-            pc=2;
-            videos[currentVideo].className="inactive";
-            videos[0].className="active";
-            videos[0].play();
-            currentVideo=0;
-            console.log(currentVideo+1);
-        }
-        else{
-            pc++;
-            videos[currentVideo].play();
-        }
+        if(currentVideo==3){
+        pc=2;
+        videos[currentVideo].className="inactive";
+        videos[0].className="active";
+        videos[0].play();
+        currentVideo=0;
+        console.log(currentVideo+1);
         return;
     }
     if(temp<pc){
