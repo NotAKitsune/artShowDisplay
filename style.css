@@ -1,25 +1,33 @@
-/* a minimalist set of CSS resets */
-
-/* default to border-box */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
+*{
+    margin: 0;
+    padding: 0;
 }
-
-*, *:before, *:after {
-  box-sizing: inherit;
+body{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0e1111;
 }
-
-/* adjust typography defaults */
-body {
-  margin: 1rem;
-  font-family: sans-serif;
-  line-height: 1.5;
+.container{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "one two three";
+    background-color: #0e1111;
 }
-
-/* images and videos max out at full width */
-img,
-video {
-  height: auto;
-  max-width: 100%;
+video{
+    height: 100vh;
+    justify-self: center;
+}
+.active{
+    transform: scale(1);
+    grid-area: one;
+    top:0;
+}
+.inactive{
+    transform: scale(0);
+    grid-area: one;
 }
