@@ -21,7 +21,6 @@ body{
 video{
     height: 100vh;
     justify-self: center;
-    pointer-events: none;
 }
 .active{
     transform: scale(1);
