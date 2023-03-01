@@ -1,5 +1,5 @@
 var pc = 2;
-var currentVideo = 0;
+var currentVideo = 1;
 var videos = document.querySelectorAll(".active,.inactive");
 
 Array.from(videos).forEach(item => {
