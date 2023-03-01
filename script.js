@@ -20,6 +20,15 @@ function myHandler(e) {
         return;
     }
     if(currentVideo==1){
+        if(temp<pc){
+            pc=2;
+            videos[currentVideo].className="inactive";
+            videos[currentVideo+2].className="active";
+            videos[currentVideo+2].play();
+            currentVideo++;
+            console.log(currentVideo+2);
+            return;
+        }
         pc=2;
         videos[currentVideo].className="inactive";
         videos[currentVideo+1].className="active";
